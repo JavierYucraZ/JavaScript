@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<script>
+		document.write("Hola mundo!!");
+		var x = 5;
+		var y;
+		y = 15;
+
+		var suma = x + y;
+		document.write("<br /> La Suma es : " + suma);
+
+		/* JavaScript detecta entre mayusculas y minusculas */
+		var X = 10;
+		var multiplicacion = x*X;
+		document.write("<br /> La multiplicacion es : " + multiplicacion);
+
+		document.write("<br /> <hr /> -- Programa para ingresar palabras --");
+
+		var cadena = "Mi string";
+		document.write("<br /> Mi primera cadena : "+ cadena);
+
+		/* Funcion para transformar una cadena a un numero */
+
+		var numeroEnCadena = parseInt("50");
+		var numero = 10;
+		var resultado = numero+numeroEnCadena;
+		document.write("<br /> La Suma es : " + resultado );
+
+		document.write("<br /> <hr /> -- Programa para ingresar valores Booleanos --");
+		var valorBooleano = true;
+		document.write("<br /> Valor Booleano : "+ valorBooleano);
+		var comparacion = (cadena == numero);
+		document.write("<br /> el valor : "+cadena+" es igual a? "+numero+ " : "+comparacion);
+		document.write("<br /> <hr /> -- Programa para preguntar el tipo de dato --");
+		var cadena2 = "TipoDeDato";
+		var tipo = (typeof cadena2== "number");
+		document.write("<br /> mi variable "+ cadena2 +" es de tipo numero? : " + tipo);
+		tipo = (typeof numero == "number");
+		document.write("<br /> mi variable "+ numero +" es de tipo numero? : " + tipo);
+
+		document.write("<br /> <hr /> -- Programa para usar Operadores Especiales --");
+		x = x+1;
+		document.write("<br /> el valor de x + 1 es : " + x );
+		x++;
+		document.write("<br /> el valor de x + 1 es : " + x );
+		y--;
+		document.write("<br /> el valor de y - 1 es : " + y);
+		x += y;
+		document.write("<br /> la suma de x + y es : " + x);
+
+		/* Manejo de Funciones */
+		function FuncionSaludo(){
+			alert("** Hola desde una alerta **");
+		}
+
+		/* Funcion con parametros internos */
+		function FuncionConParametros(nom){
+			alert("Hola "+nom);
+		}
+
+		function atraparParametro( parametro ){
+			var nombre = parametro.value;
+			alert("Tu nombre es : " +nombre+" desde una etiqueta input");
+		}
+		function atraparParametro2(parametro){
+			var nombre = parametro.value;
+			var saludo = "Hola " + nombre.toUpperCase();
+
+			document.getElementById("textoAqui").innerHTML = saludo;
+		}
+	</script>
+
+</head>
+<body>
+	<hr><br> <p> Manejo de Formularios </p>
+	<button onclick="FuncionSaludo()">Click Aqui!!</button>
+	<br>
+	<button onclick="FuncionConParametros('Javier')">Click Aqui!!</button>
+	<br>
+	<label for="nombre">Ingresa tu nombre : </label>
+	<input type="text" name="nombre" onchange="atraparParametro(this)">
+	<br>
+	<label for="nombre">Ingresa tu nombre y presiona enter : </label>
+	<input type="text" name="nombre" onchange="atraparParametro2(this)"><br>
+	<div id="textoAqui"></div>
+</body>
+</html>

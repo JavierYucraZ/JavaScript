@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones</title>
+</head>
+<body>
+
+<h1>Programa para clasificacion por edades</h1>
+<label for="edad">Proporciona tu edad : </label>
+<input type="text" name="edad" onchange="ClasificacionEdades(this)">
+<br><br>
+<div id="recomendacion" style="color: red"></div>
+<br><br><hr>
+
+<h1>Programa para determinar el dia de la fecha seleccionada</h1>
+<label for="fecha">Selecciona una fecha : </label>
+<input type="date" name="fecha" onchange="SeleccionFecha(this)">
+<br><br>
+<div id="dia" style="color: blueviolet"></div>
+<br><br><hr>
+
+<h1>Programa para generar los n primeros numeros</h1>
+<label for="limite">Determina un limite</label>
+<input type="number" name="limite" onchange="GenerarSerie(this)">
+<button onclick="Limpiar()">Limpiar</button>
+<br><br>
+<div id="serie" style="color: firebrick"></div>
+<br><br><hr>
+
+<h1>Programa para generar numeros pares</h1>
+<label for=""></label>
+<button onclick="GenerarPares()">Comenzar</button>
+<button onclick="Limpiar2()">Limpiar</button>
+<br><br>
+<div id="pares" style="color : navy"></div>
+
+<h1>Programa para mostrar un arreglo idiomas</h1>
+<button onclick="manejoArreglos()">Iniciar</button>
+<br><br>
+<div id="lengua"></div>
+<br><br><hr>
+
+<h1>Programa para mostrar una matriz</h1>
+<button onclick="manejoMatriz()">Iniciar</button>
+<br><br>
+<div id="matriz"></div>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
