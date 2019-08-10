@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+
+
+<!-- Metodo : Post 
+	Metodo : Get -->
+<form action="/envioServidor" name="form1" 
+onsubmit="return validarForm(this)" method="post">
+	<table width="200" id="estructura-formulario">
+		<caption>
+			Formulario de Registro de Datos
+		</caption>
+		<tr>
+			<td class="fondo-borde">
+				Usuario : (*)
+			</td>
+			<td>
+				<input type="text" name="usuario" value="Ingrese su usuario" onfocus="this.select()">
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Password : (*)
+			</td>
+			<td>
+				<input type="password" name="password" placeholder="Ingrese su contrase&ntilde;a" onfocus="this.select()">
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Tecnologias de interes
+			</td>
+			<td>
+				Java<input type="checkbox" name="tecnologia" value="java">
+				<br>
+				.Net<input type="checkbox" name="tecnologia" value="net">
+				<br>
+				Php<input type="checkbox" name="tecnologia" value="php">
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Genero : (*)
+			</td>
+			<td>
+				Hombre<input type="radio" name="genero" value="H">
+				<br>
+				Mujer<input type="radio" name="genero" value="M">
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Ocupacion : (*)
+			</td>
+			<td>
+				<select name="ocupacion">
+					<option selected disabled value="0">
+						Seleccione una Ocupacion
+					</option>
+					<option value="1">
+						Desarrollador front-end
+					</option>
+					<option value="2">
+						Desarrollador back-end
+					</option>
+					<option value="3">
+						Diseñador Grafico
+					</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Genero musical Favorito
+			</td>
+			<td>
+				<select name="musica" multiple>
+					<option value="rock">Rock</option>
+					<option value="pop">Pop</option>
+					<option value="salsa">Salsa</option>
+					<option value="electronica">Electronica</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="fondo-borde">
+				Comentarios :
+			</td>
+			<td>
+				<textarea name="comentarios" cols="30" rows="10"
+				placeholder="Su comentarios aca" onfocus="this.select()"></textarea>
+			</td>
+		</tr>
+		<tr style="text-align: center;">
+			<td>
+				<button type="reset">Limpiar</button>
+			</td>
+			<td>
+				<input type="submit" value="Enviar">
+			</td>
+		</tr>
+	</table>
+	
+</form>
+
+<script type="text/javascript" src="js/formulario.js"></script>
+</body>
+</html>

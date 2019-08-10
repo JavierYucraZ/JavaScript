@@ -137,6 +137,3 @@ function manejoMatriz(){
 		}
 	}
 }
-
-Tipos de datos, Operadores y funciones
-Estructuras de control
